@@ -1,1 +1,1 @@
-web:gunicorn portfolio_projec.wsgi
+web: gunicorn portfolio_projec.wsgi
