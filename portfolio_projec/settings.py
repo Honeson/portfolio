@@ -125,7 +125,7 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 django_heroku.settings(locals())
 
 
-#DEFAULT_FROM_EMAIL = 'honestycalling@gmail.com'
+
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
@@ -142,4 +142,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'honestycalling@gmail.com'
-EMAIL_HOST_PASSWORD = 'Honesty_20'
+EMAIL_HOST_PASSWORD = 'spthvkpzzkvyireg'
+DEFAULT_FROM_EMAIL = 'honestycalling@gmail.com'
