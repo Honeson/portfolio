@@ -6,11 +6,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+
+
+
+
 <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
 <link href="{% static 'css/style.css' %}" rel="stylesheet">
 <link href="{% static 'font/css/fontello.css' %}" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
-
+<script src="https://kit.fontawesome.com/e0fd213e6d.js" crossorigin="anonymous"></script>
+<!--
 <style>
   #fancybox-loading div {
 	width: 44px;
@@ -66,25 +72,56 @@ ul.work-images li div {
   font-style: normal;
 }
 </style>
+-->
 </head>
 <body>
+ 
+  
+<div class="w3-bar toptop w3-ingido w3-text-green">
+  <span class="w3-bar-item w3-button">NWOVU SUNADY</span>
+  <i class="w3-bar-item w3-right"><i class="fas fa-phone-square-alt"></i> +234 8168 722 373</i>
+  <i class="w3-bar-item w3-right"><i class="fas fa-envelope"></i> sundaynwovuhonesty@gmail.com</i>
+</div>
+  <!--
+     <div class="top_nav">
+                <div class="container">
+                    <ul class="list-inline info">
+                        <li><a href="#"><span class="fa fa-phone"></span> 1234 - 5678 - 9012</a></li>
+                        <li><a href="#"><span class="fa fa-envelope"></span> support@Construct.com</a></li>
+                        <li><a href="#"><span class="fa fa-clock-o"></span> Mon - Sat 9:00 - 19:00</a></li>
+                    </ul>
+                    <ul class="list-inline social_icon">
+                        <li><a href=""><span class="fa fa-facebook"></span></a></li>
+                        <li><a href=""><span class="fa fa-twitter"></span></a></li>
+                        <li><a href=""><span class="fa fa-behance"></span></a></li>
+                        <li><a href=""><span class="fa fa-dribbble"></span></a></li>
+                        <li><a href=""><span class="fa fa-linkedin"></span></a></li>
+                        <li><a href=""><span class="fa fa-youtube"></span></a></li>
+                    </ul>			
+                </div>
+            </div>
+-->
+
+
 <div class="navbar">
   <div class="navbar-inner">
-    <div class="container">
+    <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
       <ul class="nav nav-collapse pull-right">
-        <li><a href="/" class="active"><i class="icon-user"></i> Profile</a></li>
-        <li><a href="{% url 'skills' %}"><i class="icon-trophy"></i> Skills</a></li>
-        <li><a href="{% url 'works' %}"><i class="icon-picture"></i> Works</a></li>
-        <li><a href="{% url 'resume' %}"><i class="icon-doc-text"></i> Resume</a></li>
+        <li><a href="/" class="active"><i class="fas fa-user"></i> Profile</a></li>
+        <li><a href="{% url 'skills' %}"><i class="fas fa-trophy"></i> Skills</a></li>
+        <li><a href="{% url 'works' %}"><i class="fas fa-praying-hands"></i> Works</a></li>
+        <li><a href="{% url 'resume' %}"><i class="fas fa-file"></i> Resume</a></li>
       </ul>
       <div class="nav-collapse collapse"></div>
     </div>
   </div>
 </div>
+<div class="container">
+  {% include 'messages.html' %}
+</div>
 
 {% block content %}
 {% endblock content %}
-
 
 <div class="row social">
     <ul class="social-icons">
@@ -102,27 +139,29 @@ ul.work-images li div {
     </ul>
   </div>
   <div class="footer" href="{% static 'css/bootstrap-responsive.css' %}" rel="stylesheet" type="text/css">
+    
     <div class="container">
-      <p class="pull-left"><a href="http://dzyngiri.com">nwovusundayhonesty.herokuapp.com</a></p>
-      <p class="pull-left" style="margin-left: 20px;"><a href="mailto:sundaynwovuhonesty@gmail.com">sundaynwovuhonesty@gmail.com</a></p>
-      <p class="pull-left" style="margin-left: 20px;">+234 8168 722 372</a></p>
+      <p class="pull-left"><a href="http://sundaynwovuhonesty.herokuapp.com" target="_blank">
+        <i class="fas fa-globe"></i> sundaynwovuhonesty.herokuapp.com</a></p>
 
-      <p class="pull-right"><a href="#myModal" role="button" data-toggle="modal"> <i class="icon-mail"></i> CONTACT</a></p>
+      <p class="pull-right"><a href="#myModal" role="button" data-toggle="modal"> <i class="fas fa-envelope"></i> CONTACT ME</a></p>
     </div>
   </div>
   <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-      <h3 id="myModalLabel"><i class="icon-mail"></i> Contact Me</h3>
+      <h3 id="myModalLabel"><i class="fas fa-envelope"></i> Contact Me</h3>
     </div>
     <div class="modal-body">
-      <form action="#">
-        <input type="text" placeholder="Yopur Name">
-        <input type="text" placeholder="Your Email">
-        <input type="text" placeholder="Website (Optional)">
-        <textarea rows="3" style="width:80%"></textarea>
+      <form method="POST">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        {% for field in form.visible_fields %}
+            {{ field.errors }}         
+            {{ field }}
+        {% endfor %}
         <br>
-        <button type="submit" class="btn btn-large"><i class="icon-paper-plane"></i> SUBMIT</button>
+        <button type="submit" class="btn btn-large"><i class="fas fa-paper-plane"></i> SUBMIT</button>
       </form>
     </div>
   </div>

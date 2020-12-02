@@ -1,4 +1,10 @@
 /*This stylesheet contains some custom class rather than Bootstrap*/
+
+
+
+
+
+
 		
 a.brand img {
 	border-radius:50%;
@@ -304,5 +310,13 @@ ul.work-images li img:hover {
 	text-decoration:none;
 }
 .footer p a:hover {
+	color:#39d084;
+}
+
+.footer pre a {
+	color:#fff;
+	text-decoration:none;
+}
+.footer pre a:hover {
 	color:#39d084;
 }

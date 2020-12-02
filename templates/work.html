@@ -3,11 +3,27 @@
 {% block title %} Nwovu Sunday -Works {% endblock title %}
 
 {% block content %}
-<div class="container work">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style>
+  #git {
+    color: green;
+  }
+  #git:hover {
+    color: white;
+    text-decoration: none;
+  }
+</style>
+<!--<div class="container work">
   <h2>My Work</h2>
   <ul class="work-images">
     <li>
+      <div class="w3-card-4">
       <div><a class="fancybox-thumb" rel="fancybox-thumb" href="{% static 'img/1.jpg' %}" title="Image 01"><img src="{% static 'img/1-thumb.jpg' %}" alt=""></a></div>
+        The Italian / Austrian Alps
+      
+    </div>
     </li>
     <li>
       <div><a class="fancybox-thumb" rel="fancybox-thumb" href="{% static 'img/2.jpg' %}"><img src="{% static 'img/2-thumb.jpg' %}" alt=""></a></div>
@@ -27,5 +43,125 @@
       <div><a class="fancybox-thumb" rel="fancybox-thumb" href="{% static 'img/6.jpg' %}"><img src="{% static 'img/6-thumb.jpg' %}" alt=""></a></div>
     </li>
   </ul>
+</div>
+
+-->
+
+<div class="w3-container w3-center">
+  <h4 class="w3-center w3-text-green">MY WORKS</h4>
+  <div class="w3-row">
+    <div class="w3-container w3-third w3-card-4">
+        <div class="w3-container">
+          <h3 class="project">Time Series Prediction with ANN</h3>
+          <a href="https://github.com/Honeson/ANN">
+          <img src="{% static 'img/ann.jpg' %}" alt="Time Series Prediction" width="80%" class="w3-center"></a>
+          <p>In this project, I used Artificial Neural Network (Deep Learning) to implement time series prediction
+            using different Algorithms built on the keras api. Both univariate, multivariate and multistep prediction
+            were done here.
+          </p>
+          <a href="https://github.com/Honeson/ANN" style="text-decoration: none;"><button class="w3-button w3-block w3-green view-project">View Project</button></a>
+        </div>
+    </div>
+    <div class="w3-container w3-third w3-card-4">
+      <div class="w3-container">
+        <h3 class="project">Wiconn App Page</h3>
+        <a href="https://wiconn.info"><img src="{% static 'img/wiconn.jpg' %}" alt="Time Series Prediction" width="80%" class="w3-center"></a>
+        <p>A landing page for Wiccon App. Wiconn is an app that let's connected users send messages via text,
+          audio and even video. One can earn while watching helpful ads on Wiconn. My best is, one can use Wiconn
+          completely offline.
+        </p>
+        <a href="https://github.com/Honeson/wiconn" style="text-decoration: none;"><button class="w3-button w3-block w3-green view-project">View Project</button></a>
+      </div>
+  </div>
+  <div class="w3-container w3-third w3-card-4">
+    <div class="w3-container">
+      <h3 class="project">BGGR Construction Site</h3>
+      <a href=""><img src="{% static 'img/construction.jpg' %}" alt="Time Series Prediction" width="80%" class="w3-center"></a>
+      <p>This is one of my recent projects. BGGR is a constrcution site that stands for Big General Global
+        Resources. In this project, I combine almost all my frontend skills to create an amazing Construction
+        site for them.
+      </p>
+      <a href="" style="text-decoration: none;"><button class="w3-button w3-block w3-green view-project">View Project</button></a>
+    </div>
+</div>
+  </div>
+  <br>
+  <div class="w3-row">
+    <div class="w3-container w3-third w3-card-4">
+        <div class="w3-container">
+          <h3 class="project">Election Votes Prediction</h3>
+          <a href="https://github.com/Honeson/twiter_data"><img src="{% static 'img/sentiment.jpg' %}" alt="Time Series Prediction" width="80%" class="w3-center"></a>
+          <p>In this project I built for my client, I used a python module twint to collect tweets from twitter
+            and performed sentiment analysis on the tweet texts that I cleaned beforehand. This is one of my best
+            loved project. 
+          </p>
+          <a href="https://github.com/Honeson/twiter_data" style="text-decoration: none;"><button class="w3-button w3-block w3-green view-project">View Project</button></a>
+        </div>
+    </div>
+    <div class="w3-container w3-third w3-card-4">
+      <div class="w3-container">
+        <h3 class="project">Programmers Forum</h3>
+       <a href="http://www.codes-hub.com"> <img src="{% static 'img/forum.jpg' %}" alt="Time Series Prediction" width="80%" class="w3-center"></a>
+        <p>I built this project as a place to continue the little tutorial I was offering my friends on 
+          Whatsapp Group. The main idea behind this project is to test my django skills on various feautures.
+          Forget the UI, you must signup to explore this work.
+
+        </p>
+        <a href="https://github.com/Honeson/forum" style="text-decoration: none;"><button class="w3-button w3-block w3-green view-project">View Project</button></a>
+      </div>
+  </div>
+  <div class="w3-container w3-third w3-card-4">
+    <div class="w3-container">
+      <h3 class="project">Restful APis</h3>
+      <a href="https://github.com/Honeson/restful_api"><img src="{% static 'img/api.jpg' %}" alt="Time Series Prediction" width="80%" class="w3-center"></a>
+      <p>This was actually a project to practise the skills I had acquired on building Apis. I used the django
+        rest framework to build different Api endpoints that exposes serialized json data. I added some permission
+        and fantastic documentations.
+      </p>
+      <a href="https://github.com/Honeson/restful_api.git" style="text-decoration: none;"><button class="w3-button w3-block w3-green view-project">View Project</button></a>
+    </div>
+</div>
+  </div>
+  <br>
+  <div class="w3-row">
+    <div class="w3-container w3-third w3-card-4">
+        <div class="w3-container">
+          <h3 class="project">Ecommerce Website</h3>
+         <a href="https://github.com/Honeson/bookstore"> <img src="{% static 'img/ecommerce.jpg' %}" alt="Time Series Prediction" width="80%" class="w3-center"></a>
+          <p>Here in this project, I used django and some JavaScript to build a full-functional Ecommerce Website.
+            Some additional features of the site include applying discount on items, previewing an audio or video 
+            before proceeding to checkout. 
+          </p>
+          <a href="https://github.com/Honeson/bookstore" style="text-decoration:none;"><button class="w3-button w3-block w3-green view-project">View Project</button></a>
+        </div>
+    </div>
+    <div class="w3-container w3-third w3-card-4">
+      <div class="w3-container">
+        <h3 class="project">Logistic Regression Deployed</h3>
+        <a href="https://github.com/Honeson/restful_api"><img src="{% static 'img/logistic.jpg' %}" alt="Time Series Prediction" width="80%" class="w3-center"></a>
+        <p>This is a short but wonderful project I built. I used python to develop a logistic Regression
+          model that makes a single prediction based on several input variables. I deployed the model with django
+          and allowed users to enter factor.
+        </p>
+        <a href="https://github.com/Honeson/restful_api" style="text-decoration: none;"><button class="w3-button w3-block w3-green view-project">View Project</button></a>
+      </div>
+  </div>
+  <div class="w3-container w3-third w3-card-4">
+    <div class="w3-container">
+      <h3 class="project">TOdo App</h3>
+      <a href="https://github.com/Honeson/restful_api"><img src="{% static 'img/todo.jpg' %}" alt="Time Series Prediction" width="80%" class="w3-center"></a>
+      <p>This is a personal project I built. I built the project based on a book by Wills Vincent - Danjo
+        for Apis. The project was based on Django rest framework and reat.js was used to consume the data 
+        at each endpoints. 
+      </p>
+      <a href="https://github.com/Honeson/restful_api" style="text-decoration: none;"><button class="w3-button w3-block w3-green view-project">View Project</button></a>
+    </div>
+</div>
+  </div>
+</div>
+<p></p>
+<div class="w3-container w3-card-4 w3-center">
+  <p> For a list of all my works, Kindly visit my 
+    <a href="https://github.com/honeson" target="_blank" id="git"> GitHub page.</a> I'll be glad to work with you soon.</p>
 </div>
 {% endblock content %}

@@ -9,8 +9,8 @@ fig, (ax1, ax2) = plt.subplots(1,2, figsize=(12,8))
 ax1.barh(x,y, height=0.8, color=colours, edgecolor='white')
 for index, value in enumerate(y):
     ax1.text(value, index, str(value), color='white')
-
-ax2.pie(y, labels=x, labeldistance=0.5, colors=colours,shadow=True)
+plt.legend()
+ax2.pie(y, labels=x, colors=colours,shadow=True)
 ax2.set_title('Skills Pie Chart', fontsize=24, color='white')
 
 ax1.set_title('Skills Bar Chart', color='white', fontsize=24)
