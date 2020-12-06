@@ -30,7 +30,7 @@ def HomePage(request):
             website = form.cleaned_data['website']
             message = form.cleaned_data['message']
             try:
-                send_mail(subject, message, from_email, [settings.EMAIL_HOST_USER])
+                send_mail(subject, f'{message} \nfrom {from_email}', from_email, [settings.EMAIL_HOST_USER])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             send_mail('Message Received', f'Dear {name}! I have received your message and will get back to you shortly. \n Thanks for contacting me.',\
