@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from django.contrib import messages
 import django_heroku
 from pathlib import Path
+import os
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -30,7 +31,7 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['sundaynwovuhonesty.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
