@@ -12,7 +12,7 @@
 <div class="w3-container w3-twothird profile">
   <div class="span3"> <img src="{% static 'img/sunfull.jpg' %}" alt="Nwovu Sunday"> </div>
   <div class="span5">
-    <h1>Nwovu Sunday</h1>
+    <h1 class="w3-animate-left">Nwovu Sunday</h1>
     <h3>Python (Django) Developer &amp; <br>Data Scientist</h3>
     <p> I am Nwovu Sunday, a Web Developer and Data Scientist. 
         I studied Computer/Statistics in University of Nigeria.
@@ -23,15 +23,18 @@
     </div>
 </div>
 <div class="w3-container w3-third profile">
-    <h1>Who Am I?</h1>
+    <h1 class="w3-animate-right">Who Am I?</h1>
     <span style="color: green; font-size: large;">I'm Nwovu Sunday (Honesty) </span>
     <p class="w3-animate-bottom">A self-motivated, and upward mobile solution driven young man; 
         seeking for opportunities to learn, serve, grow, innovate and improve upon. And to become member of well-motivated team and result oriented professionals, who deliver excellent 
         solutions in products and services that ensure clients’ continuous satisfaction and patronage. 
      
     </p>
-    <a href="mailto:sundaynwovuhonesty@gmail.com" class="hire-me"><i class="fas fa-paper-plane"></i> Hire Me </a>
+    <a href="#myModal" role="button" data-toggle="modal" class="hire-me"><i class="fas fa-paper-plane"></i> Hire Me </a>
     </div>
 </div>
 
 {% endblock content %}
+<a href="#myModal" role="button" data-toggle="modal" class="contact-me"> 
+       
+    <i class="fas fa-envelope"></i> CONTACT ME</a> 

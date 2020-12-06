@@ -122,7 +122,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 
-django_heroku.settings(locals())
+
 
 
 
@@ -144,3 +144,5 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'honestycalling@gmail.com'
 EMAIL_HOST_PASSWORD = 'spthvkpzzkvyireg'
 DEFAULT_FROM_EMAIL = 'honestycalling@gmail.com'
+
+django_heroku.settings(locals())

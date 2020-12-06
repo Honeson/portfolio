@@ -1,7 +1,52 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %} Nwovu Sunday -Skills {% endblock title %}
+{%block style%}
+<style>
+  .footer_social_icon .fa,  .footer_social_icon .fab{
+    background: #11d170 none repeat scroll 0 0;
+    border-radius: 5px;
+    color: #222;
+    font-size: 20px;
+    height: 45px;
+    padding: 12px;
+    text-align: center;
+    width: 45px;
+}
 
+
+.fa, .fab {
+	display: inline-block;
+}
+.footer_item .footer_social_icon .fa:hover,.footer_item .footer_social_icon .fa:focus {
+    background: #d7a300 none repeat scroll 0 0;
+}
+
+.footer_social_icon .fa:hover,  .footer_social_icon .fab:hover {
+	text-decoration:none;
+	background: #355267;
+	border: 5px double #11d170;
+}
+
+@media (max-width: 479px){
+.list-inline.footer_social_icon > li {
+        padding: 8px 3px;
+    }
+
+}
+ul.footer_social_icon { 
+	list-style: none;
+	display: flex; 
+	justify-content: center;
+}
+
+ul.footer_social_icon li{
+	float: left;
+	margin: 10px;
+}
+
+</style>
+{% endblock style %}
 {% block content %}
 
 <div class="container skills">

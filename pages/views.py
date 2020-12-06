@@ -41,7 +41,7 @@ def HomePage(request):
     return render(request, 'home.html', {'form': form})
 
 def successView(request):
-    messages.success(request, 'Your message was sent successfully. Please check your email for more info')
+    messages.success(request, 'Your message was sent successfully. I\'ll get back to you shortly...')
     return redirect('home')
 
 def SkillsPage(request):

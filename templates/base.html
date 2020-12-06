@@ -15,6 +15,7 @@
 <link href="{% static 'css/style.css' %}" rel="stylesheet">
 <link href="{% static 'font/css/fontello.css' %}" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
 <script src="https://kit.fontawesome.com/e0fd213e6d.js" crossorigin="anonymous"></script>
 <!--
 <style>
@@ -73,6 +74,9 @@ ul.work-images li div {
 }
 </style>
 -->
+
+{% block style %}{% endblock style %}
+
 </head>
 <body>
  
@@ -124,27 +128,24 @@ ul.work-images li div {
 {% endblock content %}
 
 <div class="row social">
-    <ul class="social-icons">
-      <li><a href="https://github.com/Honeson" target="_blank"><img src="{% static 'img/github.jpg' %}" alt="github"></a></li>
-      <li><a href="https://Kaggle.com/nowdata" target="_blank"><img src="{% static 'img/kaggle.png' %}" alt="kaggle"></a></li>
-      <li><a href="https://twitter.com/BigData_Lover" target="_blank"><img src="{% static 'img/tw.png' %}" alt="twitter"></a></li>
-      <li><a href="https://facebook.com/Honesons" target="_blank"><img src="{% static 'img/fb.png' %}" alt="facebook"></a></li>
-      <li><a href="https://www.instagram.com/bigdata_lover/" target="_blank"><img src="{% static 'img/instagram.png' %}" alt="instagram"></a></li>
-      <!--
-      <li><a href="#"><img src="{% static 'img/go.png' %}" alt=""></a></li>
-      <li><a href="#"><img src="{% static 'img/pin.png' %}" alt=""></a></li>
-      <li><a href="#"><img src="{% static 'img/st.png' %}" alt=""></a></li>
-      <li><a href="#"><img src="{% static 'img/dr.png' %}" alt=""></a></li>
-      -->
-    </ul>
+  
+<p class="w3-large w3-center">Let's Connect</p>
+<ul class="list-inline footer_social_icon">
+  <li><a href="https://github.com/Honeson" target="_blank"><span class="fa fa-github"></span></a></li>
+  <li><a href="https://Kaggle.com/nowdata" target="_blank"><span class="fab fa-kaggle"></span></a></li>
+  <li><a href="https://twitter.com/BigData_Lover" target="_blank"><span class="fa fa-twitter"></span></a></li>
+  <li><a href="https://facebook.com/Honesons" target="_blank"><span class="fa fa-facebook"></span></a></li>
+  <li><a href="https://www.instagram.com/bigdata_lover/" target="_blank"><span class="fa fa-instagram"></span></a></li>
+</ul>
   </div>
   <div class="footer" href="{% static 'css/bootstrap-responsive.css' %}" rel="stylesheet" type="text/css">
     
-    <div class="container">
-      <p class="pull-left"><a href="http://sundaynwovuhonesty.herokuapp.com" target="_blank">
-        <i class="fas fa-globe"></i> sundaynwovuhonesty.herokuapp.com</a></p>
+    <div class="container" id="contact-me">
 
-      <p class="pull-right" id="me"><a href="#myModal" role="button" data-toggle="modal"> <i class="fas fa-envelope"></i> CONTACT ME</a></p>
+      <a href="#myModal" role="button" data-toggle="modal" class="contact-me"> 
+       
+        <i class="fas fa-envelope"></i> CONTACT ME</a> 
+      
     </div>
   </div>
   <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

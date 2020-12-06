@@ -67,8 +67,35 @@ a.hire-me {
 }
 a.hire-me:hover {
 	text-decoration:none;
-	background:#11d170;
+	background: #355267;
+	border: 5px double #11d170;
 }
+
+a.contact-me {
+display: inline-block;
+ *display: inline;
+	padding:10px 60px;
+	background:#11d170;
+	color:#fff;
+	text-transform:capitalize;
+	font-size:16px;
+	margin:5px 0;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+
+}
+a.contact-me:hover {
+	text-decoration:none;
+	background: #355267;
+	border: 5px double #11d170;
+}
+
+#contact-me {
+	display: flex;
+	justify-content: center;
+}
+
 .social {
 	text-align:center;
 	padding-bottom:80px;
@@ -336,4 +363,63 @@ ul.work-images li img:hover {
 }
 .footer pre a:hover {
 	color:#39d084;
+}
+
+/* All Transition */
+.list-inline.info a,.list-inline.social_icon a,nav.navbar.bootsnav ul.nav > li > a,.attr-nav > ul > li > a,.btn.know_btn,#filters > button,.portfolio_hover_area,.portfolio_hover_area .fa, .fab, .testimonial_content,.testimonial_content p:first-child::before,#contact_form .form-control,#contact_form .btn.submit_btn,footer a,.footer_social_icon .fa, .footer_social_icon .fab,.post .date,#scrollUp{
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+}
+
+.list-inline.footer_social_icon {
+    margin: 32px 0 0;
+}
+.footer_social_icon .fa,  .footer_social_icon .fab{
+    background: #11d170 none repeat scroll 0 0;
+    border-radius: 5px;
+    color: #222;
+    font-size: 20px;
+    height: 45px;
+    padding: 12px;
+    text-align: center;
+    width: 45px;
+}
+
+
+.fa, .fab {
+	display: inline-block;
+}
+.footer_item .footer_social_icon .fa:hover,.footer_item .footer_social_icon .fa:focus {
+    background: #d7a300 none repeat scroll 0 0;
+}
+
+.footer_social_icon .fa:hover,  .footer_social_icon .fab:hover {
+	text-decoration:none;
+	background: #355267;
+	border: 5px double #11d170;
+}
+
+@media (max-width: 479px){
+.list-inline.footer_social_icon > li {
+        padding: 8px 3px;
+    }
+
+}
+ul.footer_social_icon { 
+	list-style: none;
+	display: flex; 
+	justify-content: center;
+}
+
+ul.footer_social_icon li{
+	float: left;
+	margin: 10px;
+}
+
+.cv {
+	display: flex;
+	justify-content: center;
 }
