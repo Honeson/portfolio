@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = str(os.getenv('SECRET_KEY'))
-SECRET_KEY = 'h9dq=hpbf!%zdj5=b2h#x)8#lsr8urijryz3r)dlg414!ki&-9'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
